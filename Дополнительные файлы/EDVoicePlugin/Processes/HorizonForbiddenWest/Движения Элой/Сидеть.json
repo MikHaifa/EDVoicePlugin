@@ -1,0 +1,22 @@
+{
+  "phrases": [
+    "Сидеть"
+  ],
+  "pseudocode": [
+    {
+      "type": "if_program_active",
+      "program": "H:\\SteamLibrary\\steamapps\\common\\Horizon Forbidden West Complete Edition\\HorizonForbiddenWest.exe",
+      "indent_level": 0
+    },
+    {
+      "type": "keyboard_action",
+      "action": "Нажать",
+      "key": "c",
+      "indent_level": 1
+    },
+    {
+      "type": "end",
+      "indent_level": 0
+    }
+  ]
+}

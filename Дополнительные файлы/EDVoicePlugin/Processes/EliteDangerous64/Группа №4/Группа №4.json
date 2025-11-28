@@ -1,0 +1,14 @@
+{
+  "expanded": true,
+  "command_order": [
+    "Выпусти_шасси"
+  ],
+  "commands": {
+    "Выпусти_шасси": {
+      "phrases": [
+        "Выпусти шасси"
+      ],
+      "expanded": false
+    }
+  }
+}

@@ -1,0 +1,320 @@
+"event":"Fileheader"  || Fileheader ||  Первичное меню игры
+"event":"MainMenu" || MainMenu || Главное меню игры
+"event":"LoadGame" || LoadGame || Игра загружается
+"GameMode":"Solo" || Solo || Одиночная игра
+"GameMode":"Open" || Open || Открытая игра
+"event":"Shutdown" || Shutdown || Закрываю игру
+
+"StarClass":"A" ||  || От звез+ды возможна заправка
+"StarClass":"B" ||  || От звез+ды можно заправиться
+"StarClass":"F" ||  || От звез+ды можно заправить корабль
+"StarClass":"G" ||  || От звез+ды возможна заправка корабля
+"StarClass":"K" ||  || Звезд+у можно использовать для заправки
+"StarClass":"M" ||  || От звез+ды возможна заправка
+"StarClass":"O" ||  || От звез+ды можно заправить корабль
+"StarClass":"DA" ||  || От звез+ды заправка невозможна
+"StarClass":"DC" ||   || Заправка от звез+ды невозможна
+"StarClass":"Y" ||  || От звез+ды заправка невозможна
+"StarClass":"T" ||  || Заправка от звез+ды невозможна
+"StarClass":"L" ||  || От звез+ды нельзя заправиться
+"StarClass":"TTS" ||  || От звез+ды нельзя заправить корабль
+"StarClass":"S" ||  || Заправка корабля от звез+ды невозможна
+"StarClass":"W" ||  || От звез+ды заправка невозможна
+
+"SystemGovernment_Localised":"Нет" ||  || Система без принадлежности
+"SystemGovernment_Localised":"Попечительство" ||  || В системе Попечительство
+"SystemGovernment_Localised":"Корпоративная" ||  || В системе Корпоративное правление
+"SystemGovernment_Localised":"Демократия" ||  || В системе Демократическое правление
+"SystemGovernment_Localised":"Кооперация" ||  || В системе Кооперативное правление
+"SystemGovernment_Localised":"Конфедерация" ||  || В системе создана Конфедерация
+"SystemGovernment_Localised":"Диктатура" ||  || В системе царит Диктатура
+"SystemGovernment_Localised":"Анархия" ||  || В системе анархическое правление
+
+"SystemSecurity_Localised":"Анархия" ||  || Безопасность в системе без контроля
+"SystemSecurity_Localised":"Низк. ур. безопасности" ||  || Низкий уровень безопасности
+"SystemSecurity_Localised":"Средн. ур. безопасности" ||  || Средний уровень безопасности
+"SystemSecurity_Localised":"Высок. ур. безопасности" ||  || Высокий уровень безопасности
+
+"SystemAllegiance":"Federation" ||  || Система принадлежит Федерации
+"SystemAllegiance":"PilotsFederation" ||  || Система принадлежит Федерации пилотов
+"SystemAllegiance":"Empire" ||  || Система принадлежит Империи
+"SystemAllegiance":"Alliance" ||  || Система принадлежит Альянсу
+"SystemAllegiance":"Independent" ||  || Независимая система
+
+"SystemEconomy_Localised":"Высокие технологии" ||  || Экономика  Высокие технологии
+"SystemEconomy_Localised":"Сельское хозяйство" ||  || Экономика  сельское хозяйство
+"SystemEconomy_Localised":"Колония" ||  || Колониальная экономика
+"SystemEconomy_Localised":"Сфера услуг" ||  || Преобладает сфера услуг
+"SystemEconomy_Localised":"Туризм" ||  || Развивается Туризм
+"SystemEconomy_Localised":"Военная" ||  || Военная экономика
+"SystemEconomy_Localised":"Добывающая" ||  || Добывающая промышленность
+"SystemEconomy_Localised":"Промышленность" ||  || Развивается Промышленность
+"SystemEconomy_Localised":"Терраформирование" ||  || Происходит Терраформирование
+"SystemEconomy_Localised":"Ремонт" ||  || Экономика в системе Ремонт
+"SystemEconomy_Localised":"Спасение " ||  || Экономика в системе Спасение
+"SystemEconomy_Localised":"Частное предприятие " ||  || В системе Частное предприятие
+
+"WasDiscovered":false ||  || Неизвестная система
+"WasDiscovered":true ||  || Система известна
+"WasMapped":false ||  || Не картографирована
+"WasMapped":true ||  || Картографирована
+
+"StationType":"Coriolis" ||  || Станции Кориолис
+"StationType":"Orbis" ||  || Станции Орбис
+"StationType":"Ocellus" ||  || Станции Оцеллус
+"StationType":"Outpost" ||  || Тип станции Аванпост
+"StationType":"FleetCarrier" ||  || Авианосец
+
+"FactionState":"Investment"  ||  || Состояние фракции Инвестиция
+"FactionState":"Boom"  ||  || подъем деловой активности
+"FactionState":"CivilWar"  ||  || Гражданская война
+"FactionState":"Expansion"  ||  || Экспансия
+"FactionState":"Alert"  ||  || Тревога
+"FactionState":"Invasion"  ||  || Вторжение
+"FactionState":"Controlled"  ||  || Подконтрольное
+"FactionState":"Recovery"  ||  || Восстановление
+
+"StationGovernment_Localised":"Анархия" ||  || На станции царит анархия
+"StationGovernment_Localised":"Колония" ||  || На станции колониальное правление
+"StationGovernment_Localised":"Коммунизм" ||  || На станции коммунистическое правление
+"StationGovernment_Localised":"Конфедерация" ||  || На станции Конфедерация
+"StationGovernment_Localised":"Кооператив" ||  || На станции кооперативное правление
+"StationGovernment_Localised":"Корпоративная" ||  || На станции Корпоративное правление
+"StationGovernment_Localised":"Диктатура" ||  || На станции Диктатура
+"StationGovernment_Localised":"Феодализм" ||  || На станции Феодальное правление
+"StationGovernment_Localised":"Покровительство" ||  || На станции Покровительство
+"StationGovernment_Localised":"Тюрьма" ||  || На станции Тюрьма
+"StationGovernment_Localised":"Теократия" ||  || На станции Теократическое правление
+"StationGovernment_Localised":"Инженерная станция" ||  || Инженерная станция
+"StationGovernment_Localised":"Частное владение и Неизвестно" ||  || Частное владение и Неизвестно
+"StationGovernment_Localised":"Демократия" ||  || На станции демократическое правление
+
+"StationAllegiance":"Independent" ||  || Независимость
+"StationAllegiance":"PilotsFederation" ||  || Принадлежность Федерации пилотов
+"StationAllegiance":"Federation" ||  || Принадлежность Федерации
+"StationAllegiance":"Empire" ||  || Принадлежность Империи
+"StationAllegiance":"Alliance" ||  || Принадлежность Альянсу
+
+"StationEconomy_Localised":"Высокие технологии" ||  || Станция Высоких технологий
+"StationEconomy_Localised":"Добывающая" ||  || Добывающая станция
+"StationEconomy_Localised":"Нефтеперерабатывающая" ||  || Нефтеперерабатывающая станция
+"StationEconomy_Localised":"Промышленность" ||  || Промышленная станция
+"StationEconomy_Localised":"Сельскохозяйственная" ||  || Сельскохозяйственная станция
+"StationEconomy_Localised":"Туристическая" ||  || Туристическая станция
+"StationEconomy_Localised":"Сервисная" ||  || Сервисная станция
+"StationEconomy_Localised":"Военная" ||  || Военная станция
+"StationEconomy_Localised":"Колония" ||  || Колониальная станция
+"StationEconomy_Localised":"Ремонтная" ||  || Ремонтная станция
+
+"event":"Loadout" || Loadout || Командир, передаю вам управление кораблём
+
+"ShipID":11 || ShipID11 || Диамонд исследователь
+"ShipID":69 || ShipID69 || Кобра ЭМКА пять
+"ShipID":56 || ShipID56 || Мандалай универсал
+"ShipID":63 || ShipID63 || Мандалай исследователь
+"ShipID":67 || ShipID67 || Грузовой тайп восемь
+"ShipID":46 || ShipID46 || Крайт Фантом
+"ShipID":14 || ShipID14 || Фер-де-ланс
+"ShipID":53 || ShipID53 || Питон ЭМКА два
+"ShipID":25 || ShipID25 || Крайт ЭМКА два
+"ShipID":9 || ShipID9 || Питон
+"ShipID":71 || ShipID71 || Корсар
+"ShipID":50 || ShipID50 || Грузовой тайп десять
+"ShipID":30 || ShipID30 || Анаконда
+"ShipID":18 || ShipID18 || Федеральный Корвет
+"ShipID":47 || ShipID47 || Имперский Каттер
+
+"StoreShipID":11 || StoreShipID11 || с корабля Диамонд Бэк
+"StoreShipID":69 || StoreShipID69 || с корабля Кобра ЭМКА пять
+"StoreShipID":56 || StoreShipID56 || с корабля Мандалай универсал
+"StoreShipID":63 || StoreShipID63 || с корабля Мандалай исследователь
+"StoreShipID":67 || StoreShipID67 || с грузового корабля Тайп восемь
+"StoreShipID":46 || StoreShipID46 || с корабля Крайт Фантом
+"StoreShipID":14 || StoreShipID14 || с корабля Фер-де-ланс
+"StoreShipID":53 || StoreShipID53 || с корабля Питон ЭМКА два
+"StoreShipID":25 || StoreShipID25 || с корабля Крайт ЭМКА два
+"StoreShipID":9 || StoreShipID9 || с корабля Питон
+"StoreShipID":71 || StoreShipID71 || с корабля Корсар
+"StoreShipID":50 || StoreShipID50 || с грузового корабля Тайп десять
+"StoreShipID":30 || StoreShipID30 || с корабля Анаконда
+"StoreShipID":18 || StoreShipID18 || с корабля Федеральный Корвет
+"StoreShipID":47 || StoreShipID47 || с корабля Имперский Каттер
+
+"ShipName":"Diamondback Explorer" || Diamondback || Название корабля Диамонд
+"ShipName":"Cobra Mk V" || Cobra Mk V || Название корабля Кобра
+"ShipName":"Mandyalay Explorer" || Mandyalay Explorer || Название корабля Мандалай эксплорер
+"ShipName":"Mandalay Univerce" || Mandalay Univerce || Название корабля Мандалай юниверс
+"ShipName":"Type-8 Transporter" || Type8 || Название корабля Грузовой тип восемь
+"ShipName":"Krait Phantom" || Krait Phantom || Название корабля Фантом
+"ShipName":"Fer-de-Lance" || Fer-de-Lance || Название корабля Ферделансе
+"ShipName":"Python Mk II" || Python Mk II || Название корабля Питон ЭМКА 2
+"ShipName":"Krait Mk II" || Krait Mk II || Название корабля Крайт
+"ShipName":"Python" || Python || Название корабля Питон
+"ShipName":"Corsair" || Corsair || Название корабля Корсар
+"ShipName":"Type-10 Defender" || Название корабля Грузовой тип десять
+"ShipName":"Anaconda" || Anaconda || Название корабля Анаконда
+"ShipName":"Federal Corvette" || Federal Corvette || Название корабля Корвет
+"ShipName":"Imperial Cutter" || Imperial Cutter || Название корабля Каттер
+
+"event":"Liftoff" || Liftoff || Взлёт с
+"StartLanded":true || StartLanded_true || Выполняю приземление
+"StartLanded":false || StartLanded_false || StartLanded: false
+"event":"Touchdown" || Touchdown || Приземление на
+"event":"DockingRequested" || DockingRequested || Запрошена стыковка
+"event":"DockingGranted" ||  || Разрешение на стыковку получено
+"LandingPad":37 ||  || Наша площадка номер "***"
+"MusicTrack":"DockingComputer" ||  || Задействован компьютер
+"event":"Docked" || Docked || Стыковка выполнена
+"event":"Undocked" || Undocked || Отстыковка от
+
+"event":"UnderAttack" || UnderAttack || Под атакой
+"Target":"You" || TargetYou || Мы под прицелом
+"TargetLocked":true || TargetLocked:true || Цель захвачена
+"TargetLocked":false || TargetLocked:false || Цель потеряна
+"LegalStatus":"Lawless" || Lawless || Вне закона
+
+"ScanType":"Cargo" || ScanTypeCargo || Сканируют наш трюм
+
+"Ship":"sidewinder" || sidewinder || Корабль Сайдвиндер
+"Ship":"diamondback" || diamondback || Корабль Диамонд
+"Ship":"viper_mkiv" || ViperMkiv || Вайпер ЭМКА четыре
+"Ship":"empire_eagle" || EmpireEagle || Имперский игл
+"Ship":"type7" || type7 || Грузовой Тайп семь
+"Ship":"asp" || asp || Корабль АЭСПЭ
+"Ship":"cobramkiii" || cobramkiii || Кобра ЭМКА три
+"Ship":"cobramkiv"|| cobramkiv || Кобра ЭМКА четыре
+"Ship":"python" || TargetLocked:false || Корабль Питон
+
+"event":"StartJump" || StartJump || Три. Два. Один
+"JumpType":"Supercruise" || Supercruise || Супер круиз
+"event":"SupercruiseEntry" ||  || Прыжок
+"event":"SupercruiseExit" || SupercruiseExit || Выход из супер круиза
+"event":"SupercruiseDestinationDrop" || DestinationDrop || Снижаю скорость
+"MusicTrack":"DestinationFromSupercruise" || DestinationFromSupercruise || Выходим из супер круиза
+"MusicTrack":"DestinationFromHyperspace" || DestinationFromHyperspace || Выход из гиперпространства
+"event":"NavRoute" ||  || Навигационный маршрут
+"event":"FSDTarget" ||  || Цель прыжка задана
+"event":"FuelScoop" ||  || Забор топлива закончен
+"event":"ReservoirReplenished" ||  || Расходный резервуар пополнен
+"RemainingJumpsInRoute":2 ||  || До цели осталось прыжков ""
+
+"event":"ApproachBody" ||  || Сближение
+"BodyType":"Planet" ||  || цели назначения
+"BodyType":"Star" ||  || звезде
+"BodyType":"Station" ||  || Станция
+"MusicTrack":"Starport" || Starport || Космопорт
+"event":"RepairAll" ||  || Ремонт выполнен
+"event":"BuyAmmo" ||  || Боезапас пополнен
+"event":"RefuelAll" ||  || Корабль заправлен
+
+"SuitName":"tacticalsuit_class1" || tacticalsuit_class1 || Тактический скафандр первого класса
+"SuitName":"tacticalsuit_class2" || tacticalsuit_class2 || Тактический скафандр второго класса
+"SuitName":"tacticalsuit_class3" || tacticalsuit_class3 || Тактический скафандр третьего класса
+"SuitName":"tacticalsuit_class4" || tacticalsuit_class4 || Тактический скафандр четвёртого класса
+"SuitName":"tacticalsuit_class5" || tacticalsuit_class5 || Тактический скафандр пятого класса
+"SuitName":"utilitysuit_class1" || utilitysuit_class1 || Универсальный скафандр первого класса
+"SuitName":"utilitysuit_class2" || utilitysuit_class2 || Универсальный скафандр второго класса
+"SuitName":"utilitysuit_class3" || utilitysuit_class3 || Универсальный скафандр третьего класса
+"SuitName":"utilitysuit_class4" || utilitysuit_class4 || Универсальный скафандр четвёртого класса
+"SuitName":"utilitysuit_class5" || utilitysuit_class5 || Универсальный скафандр пятого класса
+"SuitName":"explorationsuit_class1" || explorationsuit_class1 || Исследовательский скафандр первого класса
+"SuitName":"explorationsuit_class2" || explorationsuit_class2 || Исследовательский скафандр второго класса
+"SuitName":"explorationsuit_class3" || explorationsuit_class3 || Исследовательский скафандр третьего класса
+"SuitName":"explorationsuit_class4" || explorationsuit_class4 || Исследовательский скафандр четвёртого класса
+"SuitName":"explorationsuit_class5" || explorationsuit_class5 || Исследовательский скафандр пятого класса
+
+"event":"SwitchSuitLoadout" || SwitchSuitLoadout || Замена комбинезона
+"event":"SuitLoadout" || SuitLoadout || Снаряжение скафандра
+"SuitMods" || SuitMods || Модификация скафандра
+"LoadoutName":"Dominator-Plazma" || DominatorPlazma || Доминатор плазма
+"LoadoutName":"Dominator-Lazer" || DominatorLazer || Доминатор лазер
+"LoadoutName":"Maverick-Plazma" || MaverickPlazma || Маврик плазма
+"LoadoutName":"Maverick-RPG" || MaverickRPG || Маверик ЭРПЭГЭ
+"LoadoutName":"Artemis-Plazma" || ArtemisPlazma || Артемис плазма
+"LoadoutName":"Artemis-RPG" || ArtemisRPG || Артемис ЭРПЭГЭ
+
+"event":"ShieldState" ||  || Состояние щита комбинезона
+"ShieldsUp":true || ShieldsUp_true || Щиты комбинезона включены 
+"ShieldsUp":false || ShieldsUp_false || Щиты комбинезона выключены
+
+"ModuleName_Localised":"Karma L-6" || Karma L-6 || Гранатомёт ЭРПЭГЭ
+"ModuleName":"wpn_m_sniper_plasma_charged" || SniperPlasma || Снайперская винтовка
+"ModuleName_Localised":"Manticore Executioner" || ManticoreExecutioner || Плазменная винтовка
+"ModuleName_Localised":"TK Aphelion" || TK Aphelion || Лазерная винтовка
+"ModuleName_Localised":"Manticore Tormentor" || ManticoreTormentor || Плазменный пистолет
+"ModuleName_Localised":"Karma AR-50" || Karma AR-50 || Плазменный автомат
+
+"event":"Embark" || Embark || Посадка
+"event":"Disembark" || Disembark || Выход
+"OnFoot":true || OnFoot_true || Пешком
+"OnFoot":false || OnFoot_false || OnFoot: false
+"MusicTrack":"OnFoot" || OnFoot || Пешком
+
+"event":"ShipyardSwap" ||  || Пересадка на корабль
+"Taxi":true || Taxi_true || Пассажир такси
+"Taxi":false || Taxi_false || Taxi: false
+"Multicrew":true || Multicrew_true || Членом экипажа корабля
+"Multicrew":false || Multicrew_false || Multicrew: false
+
+"event":"LaunchSRV" || LaunchSRV || Выгрузка ЭСЭРВЭ
+"event":"DockSRV" || DockSRV || Погрузка ЭСЭРВЭ
+"SRVType_Localised":"ТРП «Скарабей»" || Scarab || Скарабей
+"SRVType_Localised":"ТРП «Скорпион»" || Scorpion || Скорпион
+"SRV":true || SRV_true || В ЭСЭРВЭ
+"SRV":false || SRV_false || SRV: false
+
+"MusicTrack":"GalaxyMap" || GalaxyMap || Карта галактики на мониторе
+"MusicTrack":"SystemMap" || SystemMap || Карта системы на мониторе
+
+"OnStation":true || OnStation_true || На станцию
+"OnStation":false || OnStation_false || OnStation: false
+"OnPlanet":true || OnPlanet_true || Планета
+"OnPlanet":false || OnPlanet_false || OnPlanet: false
+"MusicTrack":"Exploration" ||  || Исследование
+
+"event":"Shipyard" || Shipyard || Космоверфь
+"event":"Market" || Market || Потребительский рынок
+"event":"Outfitting" || Outfitting || Экипировка
+"event":"ModuleInfo" || ModuleInfo || Модули корабля
+"MusicTrack":"Squadrons" || Squadrons || Эскадрильи
+"MusicTrack":"GalacticPowers" || GalacticPowers || Галактические державы
+"MusicTrack":"Codex" || Codex || Кодэкс
+
+"MusicTrack":"SystemAndSurfaceScanner" || SSScanner || Сканер обнаружения запущен
+"event":"SAASignalsFound" ||  || На поверхности обнаружены сигналы
+"Type_Localised":"Биологический" ||  || Биологический
+"Genus_Localised":"Бактерии" ||  || Бактерии
+"Genus_Localised":"Алеоиды" ||  || Алеоиды
+"Genus_Localised":"Амфоры" ||  || Амфоры
+"Genus_Localised":"Анемоны" ||  || Анемоны
+"Genus_Localised":"Волнистые клубни" ||  || Волнистые клубни
+"Genus_Localised":"Дерновина" ||  || Дерновина
+"Genus_Localised":"Дымники" ||  || Дымники
+"Genus_Localised":"Клипеусы" ||  || Клипеусы
+"Genus_Localised":"Корковые бугры" ||  || Корковые бугры
+"Genus_Localised":"Кустарники" ||  || Кустарники
+"Genus_Localised":"Моллюски" ||  || Моллюски
+"Genus_Localised":"Осколки кристаллов" ||  || Осколки кристаллов
+"Genus_Localised":"Оссии" ||  || Оссии
+"Genus_Localised":"Стратумы" ||  || Стратумы
+"Genus_Localised":"Тубусы" ||  || Тубусы
+"Genus_Localised":"Фонтикулы" ||  || Фонтикулы
+"Genus_Localised":"Электрики" ||  || Электрики
+"Genus_Localised":"Амфоры" ||  || Амфоры
+"Genus_Localised":"Анемоны" ||  || Анемоны
+"Genus_Localised":"Мозговые деревья" ||  || Мозговые деревья
+"Genus_Localised":"Корковые бугры" ||  || Корковые бугры
+"Genus_Localised":"Волнистые клубни" ||  || Волнистые клубни
+"Genus_Localised":"Осколки кристаллов" ||  || Осколки кристаллов
+"event":"SAAScanComplete" ||  || Сканирование поверхности завершено
+
+"ScanType":"AutoScan" ||  || Автосканирование
+"ScanType":"Detailed" ||  || Подробное сканирование
+"ScanType":"Analyse" ||  || Анализ
+"ScanType":"Log" ||  || Регистрация
+"ScanType":"Sample" ||  || Взятие пробы
+
+"External_Actions":"Interface" || ExternalActionsInterface || Открываю
+
+"Message":"$STATION_NoFireZone_entered;" || FireBan || Отключаю оружейные слоты
+"Message":"$STATION_NoFireZone_exited;" || ShootingPermit || Подключаю оружейные слоты

@@ -1,0 +1,10 @@
+{
+    "tool_button_CheckSpeechReconition": true,
+    "tool_button_CheckVoiceControl": true,
+    "tool_button_NoiseReduction": true,
+    "tool_button_CheckUseKeyword": false,
+    "VoiceCommandKeyword": "Вика",
+    "SpeechRecognitionModel": "Google Online",
+    "NoiseReductionLevel": 99,
+    "tool_button_EchoCancellation": true
+}

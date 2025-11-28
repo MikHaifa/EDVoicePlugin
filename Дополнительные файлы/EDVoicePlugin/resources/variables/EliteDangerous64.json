@@ -1,0 +1,360 @@
+{
+    "groups": [
+        {
+            "name": "КОРАБЛИ",
+            "variables": [
+                {
+                    "id": "1",
+                    "name": "Diamondback Explorer",
+                    "value": "0"
+                },
+                {
+                    "id": "2",
+                    "name": "Cobra Mk V",
+                    "value": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "Mandalay Univerce",
+                    "value": "0"
+                },
+                {
+                    "id": "4",
+                    "name": "Mandyalay Explorer",
+                    "value": "0"
+                },
+                {
+                    "id": "5",
+                    "name": "Type8",
+                    "value": "0"
+                },
+                {
+                    "id": "6",
+                    "name": "Krait Phantom",
+                    "value": "0"
+                },
+                {
+                    "id": "7",
+                    "name": "Fer-de-Lance",
+                    "value": "0"
+                },
+                {
+                    "id": "8",
+                    "name": "Python Mk II",
+                    "value": "0"
+                },
+                {
+                    "id": "9",
+                    "name": "Krait Mk II",
+                    "value": "0"
+                },
+                {
+                    "id": "10",
+                    "name": "Python",
+                    "value": "0"
+                },
+                {
+                    "id": "11",
+                    "name": "Corsair",
+                    "value": "0"
+                },
+                {
+                    "id": "12",
+                    "name": "Type-10",
+                    "value": "0"
+                },
+                {
+                    "id": "13",
+                    "name": "Anaconda",
+                    "value": "0"
+                },
+                {
+                    "id": "14",
+                    "name": "Federal Corvette",
+                    "value": "0"
+                },
+                {
+                    "id": "15",
+                    "name": "Imperial Cutter",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "АКТИВНОСТИ КОРАБЛЯ",
+            "variables": [
+                {
+                    "id": "16",
+                    "name": "Docked",
+                    "value": "1"
+                },
+                {
+                    "id": "17",
+                    "name": "OnStation",
+                    "value": "1"
+                },
+                {
+                    "id": "18",
+                    "name": "OnPlanet",
+                    "value": "0"
+                },
+                {
+                    "id": "19",
+                    "name": "StartLanded",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "ЗАПУСК ИГРЫ",
+            "variables": [
+                {
+                    "id": "20",
+                    "name": "EliteDangerous64",
+                    "value": "0"
+                },
+                {
+                    "id": "21",
+                    "name": "Fileheader",
+                    "value": "0"
+                },
+                {
+                    "id": "22",
+                    "name": "MainMenu",
+                    "value": "0"
+                },
+                {
+                    "id": "23",
+                    "name": "LoadGame",
+                    "value": "0"
+                },
+                {
+                    "id": "24",
+                    "name": "Solo",
+                    "value": "0"
+                },
+                {
+                    "id": "25",
+                    "name": "Open",
+                    "value": "0"
+                },
+                {
+                    "id": "26",
+                    "name": "Shutdown",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "СКАФАНДРЫ",
+            "variables": [
+                {
+                    "id": "27",
+                    "name": "Maverick-Plazma",
+                    "value": "0"
+                },
+                {
+                    "id": "28",
+                    "name": "Maverick-RPG",
+                    "value": "1"
+                },
+                {
+                    "id": "29",
+                    "name": "Dominator-Plazma",
+                    "value": "0"
+                },
+                {
+                    "id": "30",
+                    "name": "Dominator-Lazer",
+                    "value": "0"
+                },
+                {
+                    "id": "31",
+                    "name": "Artemis-Plazma",
+                    "value": "0"
+                },
+                {
+                    "id": "32",
+                    "name": "Artemis-RPG",
+                    "value": "0"
+                },
+                {
+                    "id": "33",
+                    "name": "ShieldsUp",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "РУЧНОЕ ОРУЖИЕ / ИНСТРУМЕНТЫ",
+            "variables": [
+                {
+                    "id": "34",
+                    "name": "Karma L-6",
+                    "value": "1"
+                },
+                {
+                    "id": "35",
+                    "name": "sniper_plasma",
+                    "value": "0"
+                },
+                {
+                    "id": "36",
+                    "name": "Manticore Executioner",
+                    "value": "0"
+                },
+                {
+                    "id": "37",
+                    "name": "TK Aphelion",
+                    "value": "0"
+                },
+                {
+                    "id": "38",
+                    "name": "Manticore Tormentor",
+                    "value": "1"
+                },
+                {
+                    "id": "39",
+                    "name": "Karma AR-50",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "ДЕЙСТВИЯ АВАТАРА",
+            "variables": [
+                {
+                    "id": "40",
+                    "name": "Embark",
+                    "value": "1"
+                },
+                {
+                    "id": "41",
+                    "name": "Disembark",
+                    "value": "0"
+                },
+                {
+                    "id": "42",
+                    "name": "OnFoot",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "SRV",
+            "variables": [
+                {
+                    "id": "43",
+                    "name": "LaunchSRV",
+                    "value": "0"
+                },
+                {
+                    "id": "44",
+                    "name": "DockSRV",
+                    "value": "1"
+                },
+                {
+                    "id": "45",
+                    "name": "Scarab",
+                    "value": "0"
+                },
+                {
+                    "id": "46",
+                    "name": "Scorpion",
+                    "value": "0"
+                },
+                {
+                    "id": "47",
+                    "name": "SRV",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "КАРТЫ",
+            "variables": [
+                {
+                    "id": "48",
+                    "name": "GalaxyMap",
+                    "value": "0"
+                },
+                {
+                    "id": "49",
+                    "name": "SystemMap",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "ГИПЕР-ДВИГАТЕЛЬ",
+            "variables": [
+                {
+                    "id": "50",
+                    "name": "Supercruise",
+                    "value": "0"
+                },
+                {
+                    "id": "51",
+                    "name": "SupercruiseEntry",
+                    "value": "0"
+                },
+                {
+                    "id": "52",
+                    "name": "SupercruiseExit",
+                    "value": "0"
+                },
+                {
+                    "id": "53",
+                    "name": "DestinationFromSupercruise",
+                    "value": "0"
+                },
+                {
+                    "id": "54",
+                    "name": "DestinationFromHyperspace",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "СЛУЖБЫ КОСМОПОРТА",
+            "variables": [
+                {
+                    "id": "55",
+                    "name": "Market",
+                    "value": "0"
+                },
+                {
+                    "id": "56",
+                    "name": "Outfitting",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "ВНУТРЕННИЙ ИНТЕРФЕЙС",
+            "variables": [
+                {
+                    "id": "57",
+                    "name": "ModuleInfo",
+                    "value": "0"
+                },
+                {
+                    "id": "58",
+                    "name": "Squadrons",
+                    "value": "0"
+                },
+                {
+                    "id": "59",
+                    "name": "GalacticPowers",
+                    "value": "0"
+                },
+                {
+                    "id": "60",
+                    "name": "Codex",
+                    "value": "0"
+                }
+            ]
+        }
+    ],
+    "variables": []
+}

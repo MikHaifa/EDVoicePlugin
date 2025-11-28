@@ -1,0 +1,14 @@
+{
+  "expanded": true,
+  "command_order": [
+    "Сидеть"
+  ],
+  "commands": {
+    "Сидеть": {
+      "phrases": [
+        "Сидеть"
+      ],
+      "expanded": false
+    }
+  }
+}

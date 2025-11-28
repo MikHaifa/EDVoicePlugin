@@ -1,0 +1,15 @@
+{
+    "groups": [
+        {
+            "name": "Чит-модификатор WeMod",
+            "variables": [
+                {
+                    "id": "1",
+                    "name": "WeMod",
+                    "value": "0"
+                }
+            ]
+        }
+    ],
+    "variables": []
+}

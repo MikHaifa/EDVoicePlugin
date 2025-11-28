@@ -1,0 +1,15 @@
+{
+  "expanded": true,
+  "command_order": [
+    "Запретный_Запад_On"
+  ],
+  "commands": {
+    "Запретный_Запад_On": {
+      "phrases": [
+        "Запретный Запад On",
+        "Открой Запретный запад"
+      ],
+      "expanded": false
+    }
+  }
+}

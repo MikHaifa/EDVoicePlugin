@@ -1,0 +1,1 @@
+папка "EDVoicePlugin" находится по пути: "C:\Users\mikha\Saved Games\EDVoicePlugin" и содержит вспомогательные файлы json и txt

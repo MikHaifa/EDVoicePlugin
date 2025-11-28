@@ -1,0 +1,21 @@
+{
+  "expanded": false,
+  "command_order": [
+    "Тест_2",
+    "Тест_4"
+  ],
+  "commands": {
+    "Тест_2": {
+      "phrases": [
+        "Тест 2"
+      ],
+      "expanded": false
+    },
+    "Тест_4": {
+      "phrases": [
+        "Тест 4"
+      ],
+      "expanded": false
+    }
+  }
+}

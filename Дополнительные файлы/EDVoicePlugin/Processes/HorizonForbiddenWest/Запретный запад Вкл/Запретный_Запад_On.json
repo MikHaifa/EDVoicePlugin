@@ -1,0 +1,32 @@
+{
+  "phrases": [
+    "Запретный Запад On",
+    "Открой Запретный запад"
+  ],
+  "pseudocode": [
+    {
+      "type": "if_program_active",
+      "program": "H:\\SteamLibrary\\steamapps\\common\\Horizon Forbidden West Complete Edition\\HorizonForbiddenWest.exe",
+      "indent_level": 0
+    },
+    {
+      "type": "say_phrase",
+      "phrase": "Игра Запретный запад уже открыта",
+      "indent_level": 1
+    },
+    {
+      "type": "else",
+      "indent_level": 0
+    },
+    {
+      "type": "say_phrase",
+      "phrase": "Запускаю игру Запретный запад",
+      "indent_level": 1
+    },
+    {
+      "type": "open_file",
+      "program": "notepad.exe",
+      "indent_level": 1
+    }
+  ]
+}

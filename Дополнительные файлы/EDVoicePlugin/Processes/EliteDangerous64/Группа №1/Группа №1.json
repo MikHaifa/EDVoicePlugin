@@ -1,0 +1,14 @@
+{
+  "expanded": false,
+  "command_order": [
+    "тест 3"
+  ],
+  "commands": {
+    "тест 3": {
+      "phrases": [
+        "тест 3"
+      ],
+      "expanded": false
+    }
+  }
+}
