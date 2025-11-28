@@ -1,0 +1,216 @@
+Обзор проекта
+Ваш проект — приложение для голосового управления ПК с акцентом на игру Elite Dangerous. Оно включает распознавание речи (STT), синтез речи (TTS), управление переменными, процессы (активация программ), конструктор скриптов (псевдокод → Python), фильтры фраз (BoardComputer), интеграцию с журналом игры (Journal/EDDI), чтение текста и обмен с VoiceAttack (VA) через файлы/UDP.
+Технологии: PySide6 (UI), Vosk/Google (STT), Silero/XTTS (TTS), NLTK (текст), PyAudio/PyDub (аудио), Flask/SocketIO (STT-сервер), Torch (модели), etc. 
+Архитектура: MVC-подобная (Controller/Engine/Bus). Шины событий для модулей. Многопоточно (таймеры/потоки для сканирования файлов, аудио). 
+Хранение: TXT/JSON в ~/Saved Games/EDVoicePlugin/resources и подпапках (процессы — отдельные папки с TXT). 
+Размер: 35 .py файлов (UI-формы + логика). Общий объём кода ~10k строк (без UI-генерации). 
+Проект работает, но есть дубликаты, неиспользуемый код и потенциал оптимизации. Нет явных лишних файлов, но некоторые пустые/минимальные (удалить/объединить).
+Ключевые модули и взаимодействие
+Модуль
+Описание
+Зависимости
+Используется в
+STT (Speech-to-Text)
+Распознавание речи (Vosk/Google, шумоподавление, эхо, ключевые слова).
+STT_engine.py, STT_controller.py, STT_bus.py (пустая).
+Main (UI), сервер (stt_server.py). Вывод в UI, команды в VA.
+TTS (Text-to-Speech)
+Синтез речи (Silero/XTTS, скорость/громкость, язык).
+TTS_engine.py, TTS_controller.py, TTS_bus.py.
+Main (озвучка статусов), Journal/EDDI (фразы из игры), Reading (чтение текста).
+Variables
+Хранение/управление переменными (TXT по процессам).
+Variables_Engine.py, Variables_Controller.py, Variables_Bus.py.
+Processes (UI-таблица), Journal (обновления из игры), VA (очередь/запросы).
+Processes
+Управление процессами (.exe, активация, переменные).
+ProcessesController.py, ProcessesBus.py, Blank_ProcessWidget.py.
+Main (UI-список), Variables (привязка), ProgramBuilder (скрипты).
+ProgramBuilder
+Конструктор скриптов (дерево, псевдокод → .py).
+ProgramBuilder_controller.py, Code_Templates*.py, CommandEditor*.py, BaseCommandRow.py.
+Processes (скрипты по процессам), UI (дерево команд).
+BoardComputer
+Фильтры фраз для озвучки (UI-таблица, JSON).
+BoardComputer_*.py.
+TTS (проверка allowed).
+Journal/EDDI
+Парсинг журнала Elite Dangerous, библиотека команд (events.txt).
+journal_controller.py, eddi_controller.py.
+TTS (озвучка событий), Variables (обновления).
+Reading
+Чтение текста (разбиение, выделение, TTS).
+ReadingController.py.
+TTS (озвучка).
+VA интеграция
+Обмен с VoiceAttack (файлы очередей/запросов, UDP).
+update_queue_engine.py, variable_request_handler.py, va_command_handler.py, communicator.py.
+Variables (обновления/запросы).
+STT-сервер
+WebSocket-сервер для внешнего STT.
+stt_server.py.
+Внешние клиенты (независим от main).
+Диалоги/UI
+Формы (удаление, переименование, команды).
+DeletionWarning.py, Dialog_WarningRename.py, CreateRenameController.py, etc.
+Все модули (создание/удаление).
+Взаимодействие (основные потоки):
+STT → TTS: Распознанный текст → озвучка/команды. 
+Journal → Variables/TTS: События игры → обновление переменных → озвучка. 
+VA ↔ App: VA запрашивает/обновляет переменные через файлы → App отвечает UDP. 
+Processes ↔ Variables/ProgramBuilder: Процессы хранят переменные/скрипты. 
+Шины (Bus): События (напр., process_activated → load_variables). 
+Таймеры: Сканирование файлов (journal, queue, reports) — 100-500мс. 
+Граф (упрощённо):
+Main → STT/TTS/Processes/Board/Journal/Reading/ProgramBuilder 
+Processes → Variables 
+Journal/EDDI → TTS/Variables 
+VA → UpdateQueue/VACommand → Variables 
+VariableRequest → VA (ответы) 
+Пути оптимизации
+1. Производительность:
+Таймеры/сканирование: Много QTimer (journal, reports, input.json, queue, request). Объединить в один (scan_all_files) для снижения нагрузки. 
+STT/TTS: Шумоподавление/эхо — ресурсоёмко; добавить опцию отключения. XTTS на CPU медленный — рекомендовать GPU. 
+Журнал: В journal_controller/load_latest_journal — читать только новые строки (seek(last_pos)). 
+Variables: TXT вместо JSON — OK, но для больших файлов использовать SQLite. 
+Кэш: В Variables_Engine — кэш OK, но invalidate после изменений. 
+2. Код/структура:
+Дубликаты: TTS_controller/change_tts_model и TTS_engine — объединить логику. 
+Пустые файлы: STT_bus.py, communicator.py — удалить, если не используются. 
+Try/except pass: Много (напр., в BoardComputer_engine/save_phrases) — добавить логи. 
+UI-генерация: Формы (Blank_ProcessWidget, etc.) — OK, но обновить Qt Designer. 
+Модульность: Bus'ы — хорошо, но некоторые пустые (STT_bus). Унифицировать (один общий Bus). 
+Тесты: Добавить unit-тесты (напр., для Variables_Engine/parse). 
+3. Функциональность:
+EDDI/Journal: Автоозвучка событий — OK, но добавить фильтры (is_phrase_allowed). 
+VA: Очередь/запросы — хорошо, но va_command_handler дублирует update_queue — объединить. 
+ProgramBuilder: Псевдокод → Python — круто, но добавить валидацию (напр., несбалансированные if/end). 
+Reading: NLTK для предложений — OK, но добавить паузы/акценты. 
+4. Безопасность/стабильность:
+Пути: Основа на ~/Saved Games — OK, но проверять права доступа. 
+Потоки: В TTS_controller/start_play_thread — добавить locks для queue. 
+Ошибки: В STT_engine/audio_callback_vosk — добавить обработку. 
+Зависимости: NLTK/torch — большие; добавить requirements.txt. 
+Лишние/неиспользуемые файлы/код
+1. STT_bus.py: Пустая шина — не используется. Удалить. 
+2. communicator.py: Пустой — не используется. Удалить. 
+3. va_command_handler.py: Дублирует update_queue_engine (оба обрабатывают va_variables.txt). Удалить, логику в update_queue. 
+4. TTS_bus.py: Используется в TTS? — Нет (TTS_controller не использует). Удалить. 
+5. BoardComputer_bus.py: Используется в BoardComputer_controller (publish 'phrase_toggled'). OK, но если не критично — интегрировать напрямую. 
+6. res_rc.py: Ресурсы — OK. 
+7. stt_server.py: Отдельный сервер — если не часть main, вынести в подпроект. 
+8. Неиспользуемый код:
+В STT_controller: EchoCancellation — закомментировано. 
+В TTS_controller: num2words — не используется. 
+В main.py: clear_all_fields — не определён (Undo?). 
+Рекомендация: Удалить 4 файла (STT_bus, communicator, va_command_handler, TTS_bus) — сэкономит 10% кода.
+Итог
+Проект солидный, но оптимизируйте сканирование/потоки для производительности. Удалите пустые файлы. Для работы с вами: загрузите на GitHub (как предлагал) — ссылка на репозиторий упростит изменения. Если нужно, дам патчи/рефакторинг.
+Обзор проекта
+Ваш проект — приложение для голосового управления ПК с акцентом на игру Elite Dangerous. Оно включает распознавание речи (STT), синтез речи (TTS), управление переменными, процессы (активация программ), конструктор скриптов (псевдокод → Python), фильтры фраз (BoardComputer), интеграцию с журналом игры (Journal/EDDI), чтение текста и обмен с VoiceAttack (VA) через файлы/UDP.
+Технологии: PySide6 (UI), Vosk/Google (STT), Silero/XTTS (TTS), NLTK (текст), PyAudio/PyDub (аудио), Flask/SocketIO (STT-сервер), Torch (модели), etc. 
+Архитектура: MVC-подобная (Controller/Engine/Bus). Шины событий для модулей. Многопоточно (таймеры/потоки для сканирования файлов, аудио). 
+Хранение: TXT/JSON в ~/Saved Games/EDVoicePlugin/resources и подпапках (процессы — отдельные папки с TXT). 
+Размер: 35 .py файлов (UI-формы + логика). Общий объём кода ~10k строк (без UI-генерации). 
+Проект работает, но есть дубликаты, неиспользуемый код и потенциал оптимизации. Нет явных лишних файлов, но некоторые пустые/минимальные (удалить/объединить).
+Ключевые модули и взаимодействие
+Модуль
+Описание
+Зависимости
+Используется в
+STT (Speech-to-Text)
+Распознавание речи (Vosk/Google, шумоподавление, эхо, ключевые слова).
+STT_engine.py, STT_controller.py, STT_bus.py (пустая).
+Main (UI), сервер (stt_server.py). Вывод в UI, команды в VA.
+TTS (Text-to-Speech)
+Синтез речи (Silero/XTTS, скорость/громкость, язык).
+TTS_engine.py, TTS_controller.py, TTS_bus.py.
+Main (озвучка статусов), Journal/EDDI (фразы из игры), Reading (чтение текста).
+Variables
+Хранение/управление переменными (TXT по процессам).
+Variables_Engine.py, Variables_Controller.py, Variables_Bus.py.
+Processes (UI-таблица), Journal (обновления из игры), VA (очередь/запросы).
+Processes
+Управление процессами (.exe, активация, переменные).
+ProcessesController.py, ProcessesBus.py, Blank_ProcessWidget.py.
+Main (UI-список), Variables (привязка), ProgramBuilder (скрипты).
+ProgramBuilder
+Конструктор скриптов (дерево, псевдокод → .py).
+ProgramBuilder_controller.py, Code_Templates*.py, CommandEditor*.py, BaseCommandRow.py.
+Processes (скрипты по процессам), UI (дерево команд).
+BoardComputer
+Фильтры фраз для озвучки (UI-таблица, JSON).
+BoardComputer_*.py.
+TTS (проверка allowed).
+Journal/EDDI
+Парсинг журнала Elite Dangerous, библиотека команд (events.txt).
+journal_controller.py, eddi_controller.py.
+TTS (озвучка событий), Variables (обновления).
+Reading
+Чтение текста (разбиение, выделение, TTS).
+ReadingController.py.
+TTS (озвучка).
+VA интеграция
+Обмен с VoiceAttack (файлы очередей/запросов, UDP).
+update_queue_engine.py, variable_request_handler.py, va_command_handler.py, communicator.py.
+Variables (обновления/запросы).
+STT-сервер
+WebSocket-сервер для внешнего STT.
+stt_server.py.
+Внешние клиенты (независим от main).
+Диалоги/UI
+Формы (удаление, переименование, команды).
+DeletionWarning.py, Dialog_WarningRename.py, CreateRenameController.py, etc.
+Все модули (создание/удаление).
+Взаимодействие (основные потоки):
+STT → TTS: Распознанный текст → озвучка/команды. 
+Journal → Variables/TTS: События игры → обновление переменных → озвучка. 
+VA ↔ App: VA запрашивает/обновляет переменные через файлы → App отвечает UDP. 
+Processes ↔ Variables/ProgramBuilder: Процессы хранят переменные/скрипты. 
+Шины (Bus): События (напр., process_activated → load_variables). 
+Таймеры: Сканирование файлов (journal, queue, reports) — 100-500мс. 
+Граф (упрощённо):
+Main → STT/TTS/Processes/Board/Journal/Reading/ProgramBuilder 
+Processes → Variables 
+Journal/EDDI → TTS/Variables 
+VA → UpdateQueue/VACommand → Variables 
+VariableRequest → VA (ответы) 
+Пути оптимизации
+1. Производительность:
+Таймеры/сканирование: Много QTimer (journal, reports, input.json, queue, request). Объединить в один (scan_all_files) для снижения нагрузки. 
+STT/TTS: Шумоподавление/эхо — ресурсоёмко; добавить опцию отключения. XTTS на CPU медленный — рекомендовать GPU. 
+Журнал: В journal_controller/load_latest_journal — читать только новые строки (seek(last_pos)). 
+Variables: TXT вместо JSON — OK, но для больших файлов использовать SQLite. 
+Кэш: В Variables_Engine — кэш OK, но invalidate после изменений. 
+2. Код/структура:
+Дубликаты: TTS_controller/change_tts_model и TTS_engine — объединить логику. 
+Пустые файлы: STT_bus.py, communicator.py — удалить, если не используются. 
+Try/except pass: Много (напр., в BoardComputer_engine/save_phrases) — добавить логи. 
+UI-генерация: Формы (Blank_ProcessWidget, etc.) — OK, но обновить Qt Designer. 
+Модульность: Bus'ы — хорошо, но некоторые пустые (STT_bus). Унифицировать (один общий Bus). 
+Тесты: Добавить unit-тесты (напр., для Variables_Engine/parse). 
+3. Функциональность:
+EDDI/Journal: Автоозвучка событий — OK, но добавить фильтры (is_phrase_allowed). 
+VA: Очередь/запросы — хорошо, но va_command_handler дублирует update_queue — объединить. 
+ProgramBuilder: Псевдокод → Python — круто, но добавить валидацию (напр., несбалансированные if/end). 
+Reading: NLTK для предложений — OK, но добавить паузы/акценты. 
+4. Безопасность/стабильность:
+Пути: Основа на ~/Saved Games — OK, но проверять права доступа. 
+Потоки: В TTS_controller/start_play_thread — добавить locks для queue. 
+Ошибки: В STT_engine/audio_callback_vosk — добавить обработку. 
+Зависимости: NLTK/torch — большие; добавить requirements.txt. 
+Лишние/неиспользуемые файлы/код
+1. STT_bus.py: Пустая шина — не используется. Удалить. 
+2. communicator.py: Пустой — не используется. Удалить. 
+3. va_command_handler.py: Дублирует update_queue_engine (оба обрабатывают va_variables.txt). Удалить, логику в update_queue. 
+4. TTS_bus.py: Используется в TTS? — Нет (TTS_controller не использует). Удалить. 
+5. BoardComputer_bus.py: Используется в BoardComputer_controller (publish 'phrase_toggled'). OK, но если не критично — интегрировать напрямую. 
+6. res_rc.py: Ресурсы — OK. 
+7. stt_server.py: Отдельный сервер — если не часть main, вынести в подпроект. 
+8. Неиспользуемый код:
+В STT_controller: EchoCancellation — закомментировано. 
+В TTS_controller: num2words — не используется. 
+В main.py: clear_all_fields — не определён (Undo?). 
+Рекомендация: Удалить 4 файла (STT_bus, communicator, va_command_handler, TTS_bus) — сэкономит 10% кода.
+Итог
+Проект солидный, но оптимизируйте сканирование/потоки для производительности. Удалите пустые файлы. Для работы с вами: загрузите на GitHub (как предлагал) — ссылка на репозиторий упростит изменения. Если нужно, дам патчи/рефакторинг.
